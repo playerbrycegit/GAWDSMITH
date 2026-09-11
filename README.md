@@ -1,6 +1,6 @@
 # Gawdsmith Advisory Website v1
 
-A responsive, single-page website for Gawdsmith Advisory built from the locked Gawdsmith architecture.
+A responsive, single-page website for Gawdsmith Advisory built from the locked Gawdsmith architecture. This edition includes the refined Gawdsmith lockup, an institutional blueprint hero, improved mobile navigation and accessible interaction states.
 
 ## Sections
 - Home
@@ -30,7 +30,6 @@ Then open http://localhost:8080
 
 ## Before public deployment
 - Add the approved logo package if/when supplied as image/SVG assets.
-- Replace the contact form `mailto:` behavior with a production form endpoint or CRM integration.
-- Add official domain/contact email.
+- Set the approved inquiry email in the `data-recipient` attribute on `#contactForm`.
 - Add final privacy/terms language as appropriate.
 - Add approved leadership bio and any case studies when ready.
