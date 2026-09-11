@@ -4,18 +4,22 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="Gawdsmith Advisory is a Business Architecture firm helping organizations become stronger institutions through intentional architecture."/>
+  <meta name="theme-color" content="#08070a"/>
   <title>Gawdsmith Advisory — Business Architecture</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2308070a'/%3E%3Cpath d='M48 19H30c-8 0-14 5-14 13s6 13 14 13h8v-9H28' fill='none' stroke='%23c5a458' stroke-width='5'/%3E%3C/svg%3E"/>
   <link rel="stylesheet" href="styles.css"/>
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="noise"></div>
   <header class="topbar">
     <a class="brand" href="#home" aria-label="Gawdsmith Advisory home">
-      <span class="brand-mark">G</span>
-      <span class="brand-word">GAWDSMITH</span>
+      <span class="brand-mark" aria-hidden="true"><i>G</i></span>
+      <span class="brand-lockup"><span class="brand-word">GAWDSMITH</span><span class="brand-descriptor">ADVISORY</span></span>
     </a>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-    <nav class="nav">
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+    <nav class="nav" id="primary-nav" aria-label="Primary navigation">
       <a href="#architecture">Business Architecture</a>
       <a href="#forge">FORGE™</a>
       <a href="#services">Services</a>
@@ -26,43 +30,45 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section id="home" class="hero section">
       <div class="hero-grid">
         <div class="hero-copy reveal">
-          <div class="eyebrow">GAWDSMITH ADVISORY</div>
+          <div class="eyebrow">BUSINESS ARCHITECTURE · EXECUTIVE ADVISORY</div>
           <h1>We architect <span>institutions.</span></h1>
           <p class="lede">Gawdsmith Advisory helps organizations understand, redesign, strengthen, and evolve the systems beneath performance.</p>
           <div class="hero-actions">
             <a class="btn primary" href="#contact">Request a FORGE™ Diagnostic</a>
             <a class="btn ghost" href="#architecture">Explore Business Architecture</a>
           </div>
-          <div class="brand-line">Good. Great. <strong>Gawdly.</strong></div>
+          <div class="brand-line"><span>Good.</span><span>Great.</span><strong>Gawdly.</strong></div>
         </div>
         <div class="hero-system reveal">
           <div class="architecture-card">
             <div class="card-top">
-              <span>BUSINESS ARCHITECTURE</span>
-              <span class="status">SYSTEM VIEW</span>
+              <span>INSTITUTIONAL BLUEPRINT</span>
+              <span class="status">GS / 001</span>
             </div>
-            <div class="orbit">
-              <div class="node center">Institution</div>
-              <div class="node n1">Identity</div>
-              <div class="node n2">Execution</div>
-              <div class="node n3">Sustainability</div>
-              <div class="node n4">Evolution</div>
-              <div class="node n5">Legacy</div>
-              <svg viewBox="0 0 500 400" aria-hidden="true">
-                <line x1="250" y1="200" x2="250" y2="48"/>
-                <line x1="250" y1="200" x2="425" y2="145"/>
-                <line x1="250" y1="200" x2="360" y2="345"/>
-                <line x1="250" y1="200" x2="140" y2="345"/>
-                <line x1="250" y1="200" x2="75" y2="145"/>
-              </svg>
+            <div class="blueprint" aria-label="FORGE institutional architecture">
+              <div class="blueprint-monogram" aria-hidden="true">G</div>
+              <div class="blueprint-core"><small>Designed as</small><strong>One<br/>Institution</strong></div>
+              <ol class="blueprint-pillars">
+                <li><b>F</b><span>Foundation</span><small>Identity</small></li>
+                <li><b>O</b><span>Operations</span><small>Execution</small></li>
+                <li><b>R</b><span>Revenue</span><small>Sustainability</small></li>
+                <li><b>G</b><span>Growth</span><small>Evolution</small></li>
+                <li><b>E</b><span>Expansion</span><small>Legacy</small></li>
+              </ol>
             </div>
-            <div class="card-bottom">Structure → Systems → Decisions → Performance</div>
+            <div class="card-bottom"><span>STRUCTURE → SYSTEMS → DECISIONS → PERFORMANCE</span><b>FORGE™</b></div>
           </div>
         </div>
+      </div>
+      <div class="hero-index reveal" aria-label="Gawdsmith engagement sequence">
+        <div><span>01</span><strong>Diagnose</strong></div>
+        <div><span>02</span><strong>Architect</strong></div>
+        <div><span>03</span><strong>Implement</strong></div>
+        <div><span>04</span><strong>Evolve</strong></div>
       </div>
     </section>
 
@@ -215,7 +221,7 @@
           <h2>What keeps repeating?</h2>
           <p>Tell us what changed, what is not working, or what decision leadership needs to make. Gawdsmith will determine whether the issue is architectural—and where to begin.</p>
         </div>
-        <form class="contact-form reveal" id="contactForm">
+        <form class="contact-form reveal" id="contactForm" data-recipient="">
           <label>Organization<input required name="organization" placeholder="Organization name"/></label>
           <label>Name<input required name="name" placeholder="Your name"/></label>
           <label>Email<input required type="email" name="email" placeholder="you@company.com"/></label>
@@ -228,14 +234,15 @@
             <select name="interest"><option>FORGE™ Diagnostic</option><option>Business Blueprint™</option><option>Implementation</option><option>Executive Advisory™</option><option>Special Situation</option><option>Not sure yet</option></select>
           </label>
           <button class="btn primary wide" type="submit">Speak with Gawdsmith</button>
-          <p class="form-status wide" id="formStatus"></p>
+          <p class="form-note wide">Your information is used only to review and respond to this inquiry.</p>
+          <p class="form-status wide" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-brand">GAWDSMITH</div>
+    <div class="footer-mark"><span class="brand-mark" aria-hidden="true"><i>G</i></span><div class="footer-brand">GAWDSMITH</div></div>
     <div class="footer-line">Good. Great. Gawdly.</div>
     <div class="footer-meta">Business Architecture • FORGE™ • GBS™ • Business Blueprint™ • GawdOS</div>
     <div class="footer-copy">© <span id="year"></span> Gawdsmith Advisory. All rights reserved.</div>
