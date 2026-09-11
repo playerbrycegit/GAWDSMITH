@@ -1,12 +1,14 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 menuToggle?.addEventListener('click', () => {
-  nav.classList.toggle('open');
-  document.body.classList.toggle('menu-open');
+  const isOpen = nav.classList.toggle('open');
+  document.body.classList.toggle('menu-open', isOpen);
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
 });
 document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
   nav.classList.remove('open');
   document.body.classList.remove('menu-open');
+  menuToggle?.setAttribute('aria-expanded', 'false');
 }));
 
 const observer = new IntersectionObserver((entries) => {
@@ -26,9 +28,9 @@ const status = document.getElementById('formStatus');
 form?.addEventListener('submit', (e) => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(form).entries());
+  const recipient = form.dataset.recipient?.trim();
   const subject = encodeURIComponent(`Gawdsmith Inquiry — ${data.organization}`);
-  const body = encodeURIComponent(
-`Organization: ${data.organization}
+  const inquiry = `Organization: ${data.organization}
 Name: ${data.name}
 Email: ${data.email}
 Role: ${data.role || ''}
@@ -36,8 +38,14 @@ Organization size: ${data.size || ''}
 Interest: ${data.interest || ''}
 
 Challenge:
-${data.challenge}`
-  );
-  status.textContent = 'Your inquiry is ready. Opening your email client to send it to Gawdsmith.';
-  window.location.href = `mailto:?subject=${subject}&body=${body}`;
+${data.challenge}`;
+
+  if (!recipient) {
+    navigator.clipboard?.writeText(inquiry);
+    status.textContent = 'Your inquiry is prepared. Gawdsmith contact routing is being finalized.';
+    return;
+  }
+
+  status.textContent = 'Your inquiry is ready. Opening your email client.';
+  window.location.href = `mailto:${encodeURIComponent(recipient)}?subject=${subject}&body=${encodeURIComponent(inquiry)}`;
 });
