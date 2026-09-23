@@ -122,6 +122,53 @@ h2{font-family:"Libre Caslon Display",serif;font-size:clamp(3rem,5.2vw,6rem);fon
 .service-list h3{font-family:"Libre Caslon Display",serif;font-size:1.8rem;margin:0 0 6px}
 .service-list p{color:#66646b;margin:0;max-width:740px}
 .service-outcome{text-align:right;color:var(--purple2);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.12em}
+.resurrection-section{background:#09090b;background-image:radial-gradient(circle at 15% 15%,rgba(61,27,90,.42),transparent 30%)}
+.resurrection-intro{max-width:1320px;margin:0 auto 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:8vw;align-items:end}
+.resurrection-intro h2{max-width:720px;margin-bottom:0}
+.resurrection-copy{border-left:1px solid rgba(197,164,88,.45);padding-left:28px}
+.resurrection-copy p{font-size:1.06rem;color:#bbb8c1;margin:0 0 18px}
+.equity-ledger{max-width:1320px;margin:auto;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+.ledger-head{display:flex;justify-content:space-between;padding:15px 18px;border-bottom:1px solid var(--line);color:#918e98;font-size:.75rem;letter-spacing:.15em}
+.ledger-head span:last-child{color:var(--gold)}
+.equity-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.equity-grid span{padding:23px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-family:"Libre Caslon Display",serif;font-size:1.45rem;color:#dedbe3}
+.equity-grid span:nth-child(4n){border-right:0}
+.equity-grid .equity-wide{grid-column:1/-1;border-right:0;border-bottom:0;color:var(--gold);text-align:center;font-size:2rem}
+.resurrection-path{max-width:1320px;margin:70px auto 0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.resurrection-path article{padding:30px 24px;min-height:260px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.resurrection-path span{color:var(--gold);font-size:.75rem;letter-spacing:.15em}
+.resurrection-path h3{font-family:"Libre Caslon Display",serif;font-size:1.75rem;margin:55px 0 12px}
+.resurrection-path p{color:#918e98;margin:0}
+.engagement-section{background:#ebe8e2}
+.engagement-map{max-width:1320px;margin:auto;border-top:1px solid var(--darkline)}
+.engagement-map article{display:grid;grid-template-columns:90px 1fr;gap:20px;padding:28px 0;border-bottom:1px solid var(--darkline)}
+.engagement-map>article>span{font-family:"Libre Caslon Display",serif;font-size:2rem;color:var(--gold)}
+.engagement-map small{color:var(--purple2);font-weight:700;letter-spacing:.15em}
+.engagement-map h3{font-family:"Libre Caslon Display",serif;font-size:1.9rem;margin:6px 0}
+.engagement-map p{max-width:760px;margin:0;color:#66636b;font-size:1rem}
+.deliverables{max-width:1320px;margin:90px auto 0;display:grid;grid-template-columns:.75fr 1.25fr;gap:7vw;align-items:start}
+.deliverables-title h3{font-family:"Libre Caslon Display",serif;font-size:2.6rem;margin-bottom:18px}
+.deliverables-title p{color:#66636b;font-size:1rem}
+.deliverables-grid{display:grid;grid-template-columns:1fr 1fr;border-left:1px solid var(--darkline);border-top:1px solid var(--darkline)}
+.deliverables-grid article{padding:22px;min-height:112px;border-right:1px solid var(--darkline);border-bottom:1px solid var(--darkline);display:flex;flex-direction:column;justify-content:space-between}
+.deliverables-grid b{color:var(--gold);font-size:.75rem;letter-spacing:.12em}
+.deliverables-grid span{font-family:"Libre Caslon Display",serif;font-size:1.25rem}
+.case-section{background:#0b0b0d}
+.case-heading{max-width:1050px;margin:0 auto 80px;text-align:center}
+.case-heading p{color:#8d8993;max-width:680px;margin:auto;font-size:1rem}
+.case-layout{max-width:1320px;margin:auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:7vw;align-items:start}
+.case-label,.case-response span{display:block;color:var(--gold);font-size:.75rem;letter-spacing:.16em;font-weight:700}
+.case-context>p{font-size:1.15rem;color:#cbc8d0}
+.case-context blockquote{font-family:"Libre Caslon Display",serif;font-size:2rem;line-height:1.15;margin:45px 0 0;padding-left:24px;border-left:2px solid var(--gold);color:#f1eef4}
+.case-forge{border-top:1px solid var(--line)}
+.case-forge article{display:grid;grid-template-columns:55px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.case-forge b{font-family:"Libre Caslon Display",serif;font-size:2rem;color:var(--gold);font-weight:400}
+.case-forge h3{font-size:1rem;margin:0 0 4px;letter-spacing:.05em}
+.case-forge p{color:#8d8993;margin:0;font-size:.94rem}
+.case-response{max-width:1320px;margin:80px auto 0;display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.case-response article{min-height:270px;padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.case-response h3{font-family:"Libre Caslon Display",serif;font-size:1.65rem;margin:60px 0 12px}
+.case-response p{color:#918e98;margin:0}
 .gawdos-section{background:var(--purple);background-image:radial-gradient(circle at 80% 10%,rgba(199,162,75,.12),transparent 27%)}
 .os-shell{background:#0b0b0d;border:1px solid rgba(255,255,255,.18);padding:18px;box-shadow:0 40px 120px rgba(0,0,0,.3)}
 .os-content{display:grid;grid-template-columns:.38fr .62fr;gap:25px;padding:35px 15px}
@@ -172,9 +219,11 @@ footer{padding:70px 6vw;background:#050506;border-top:1px solid var(--line);text
   .nav.open{display:flex}
   .menu-toggle{display:grid}
   .hero-grid,.gawdos-grid,.contact-grid,.about-grid,.split{grid-template-columns:1fr}
+  .resurrection-intro,.deliverables,.case-layout{grid-template-columns:1fr}
   .forge-grid{grid-template-columns:1fr 1fr}
   .anatomy-grid{grid-template-columns:1fr 1fr}
   .doctrine-grid{grid-template-columns:1fr 1fr}
+  .resurrection-path,.case-response{grid-template-columns:1fr 1fr}
   .hero-system{margin-top:20px}
   .hero-index{grid-template-columns:1fr 1fr}
   .hero-index div:nth-child(2){border-right:0}
@@ -184,6 +233,13 @@ footer{padding:70px 6vw;background:#050506;border-top:1px solid var(--line);text
   .hero{padding-top:120px}
   h1{font-size:4rem}
   .forge-grid,.anatomy-grid,.doctrine-grid{grid-template-columns:1fr}
+  .equity-grid{grid-template-columns:1fr 1fr}
+  .equity-grid span:nth-child(4n){border-right:1px solid var(--line)}
+  .equity-grid span:nth-child(2n){border-right:0}
+  .resurrection-path,.case-response,.deliverables-grid{grid-template-columns:1fr}
+  .engagement-map article{grid-template-columns:55px 1fr}
+  .case-response article{min-height:auto}
+  .case-response h3{margin-top:32px}
   .service-list article{grid-template-columns:45px 1fr}
   .service-outcome{grid-column:2;text-align:left}
   .contact-form{grid-template-columns:1fr}
