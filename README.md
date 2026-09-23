@@ -9,6 +9,7 @@ A responsive, single-page website for Gawdsmith Advisory built from the locked G
 - Services
 - Brand Resurrection & Transformation™
 - Engagement Process and Deliverables
+- Engagement Packages, Pricing, and Commercial Terms
 - Illustrative Engagement
 - GawdOS
 - Insights / Doctrine
