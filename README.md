@@ -7,6 +7,9 @@ A responsive, single-page website for Gawdsmith Advisory built from the locked G
 - Business Architecture
 - FORGE™
 - Services
+- Brand Resurrection & Transformation™
+- Engagement Process and Deliverables
+- Illustrative Engagement
 - GawdOS
 - Insights / Doctrine
 - About
