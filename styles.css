@@ -94,7 +94,7 @@ h2{font-family:"Libre Caslon Display",serif;font-size:clamp(3rem,5.2vw,6rem);fon
 .hero-index{width:100%;max-width:1440px;margin:70px auto 0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.1)}
 .hero-index div{padding:20px 0;border-right:1px solid rgba(255,255,255,.1);display:flex;gap:15px;align-items:center}
 .hero-index div:last-child{border-right:0}
-.hero-index span{color:var(--gold);font-size:.58rem;letter-spacing:.12em}
+.hero-index span{color:var(--gold);font-family:"Libre Caslon Display",serif;font-size:1.3rem;letter-spacing:.04em;min-width:38px}
 .hero-index strong{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;font-weight:600;color:#bbb8c1}
 .light-section{background:var(--paper);color:var(--ink)}
 .section-head{max-width:880px;margin:0 auto 70px;text-align:center}
@@ -231,6 +231,11 @@ h2{font-family:"Libre Caslon Display",serif;font-size:clamp(3rem,5.2vw,6rem);fon
 .principles strong,.principles span{display:block}
 .principles strong{color:var(--gold);font-family:"Libre Caslon Display",serif;font-size:1.4rem}
 .principles span{color:#7f7c86;font-size:.78rem}
+.institution-arms{display:grid;grid-template-columns:repeat(3,1fr);margin-top:38px;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.institution-arms article{padding:22px 18px;min-height:180px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.institution-arms b{color:var(--gold);font-size:.7rem;letter-spacing:.14em}
+.institution-arms h3{font-family:"Libre Caslon Display",serif;font-size:1.45rem;margin:42px 0 8px}
+.institution-arms p{margin:0;color:#88848e;font-size:.84rem}
 .contact-section{background:var(--paper);color:var(--ink)}
 .contact-grid{align-items:start}
 .qualification-list{margin-top:35px;border-top:1px solid var(--darkline)}
@@ -276,6 +281,7 @@ footer{padding:70px 6vw;background:#050506;border-top:1px solid var(--line);text
   .equity-grid span:nth-child(4n){border-right:1px solid var(--line)}
   .equity-grid span:nth-child(2n){border-right:0}
   .resurrection-path,.case-response,.deliverables-grid,.offer-grid{grid-template-columns:1fr}
+  .institution-arms{grid-template-columns:1fr}
   .offer-purpose{min-height:0}
   .specialized-offers article{grid-template-columns:1fr}
   .specialized-offers article>p{grid-column:auto}
