@@ -18,9 +18,10 @@ A responsive, single-page website for Gawdsmith Advisory built from the locked G
 
 ## Brand
 - Black
-- Dark Purple
-- Silver
-- Gold
+- Deep Dark Purple
+- Platinum
+- Steel
+- Controlled metallic and purple-to-black gradients
 - "Good. Great. Gawdly."
 
 ## Run locally
