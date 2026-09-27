@@ -38,7 +38,7 @@ Organization size: ${data.size || ''}
 Interest: ${data.interest || ''}
 Leadership sponsor: ${data.sponsor || ''}
 Desired start: ${data.timeline || ''}
-Investment readiness: ${data.investment || ''}
+Scope readiness: ${data.investment || ''}
 
 Challenge:
 ${data.challenge}`;
