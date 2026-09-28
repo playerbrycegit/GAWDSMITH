@@ -1047,3 +1047,51 @@ body.is-transitioning main{
   body.is-transitioning main{animation:none!important}
   .js .reveal{clip-path:none!important;filter:none!important}
 }
+
+/* Controlled section transition — closes, moves, then reopens */
+body.transition-lock{overflow:hidden}
+.site-transition{
+  position:fixed;
+  inset:0;
+  z-index:1200;
+  pointer-events:none;
+  overflow:hidden;
+  visibility:hidden;
+}
+.site-transition.is-active{visibility:visible}
+.transition-panel{
+  position:absolute;
+  inset:-2px;
+  display:block;
+  transform:translate3d(-110%,0,0);
+  will-change:transform;
+}
+.transition-panel-dark{
+  background:#020204;
+  animation-delay:0ms;
+}
+.transition-panel-purple{
+  inset:-2px 12% -2px -2px;
+  background:linear-gradient(108deg,#050307 0%,#21072d 68%,#4d1767 100%);
+  animation-delay:55ms;
+}
+.transition-panel-steel{
+  inset:-2px auto -2px 0;
+  width:7px;
+  background:linear-gradient(180deg,#707a87,#d0d6de 48%,#5f6874);
+  box-shadow:0 0 34px rgba(180,189,200,.4);
+  animation-delay:105ms;
+}
+.site-transition.is-active .transition-panel{
+  animation:panel-close-open .9s cubic-bezier(.76,0,.24,1) both;
+}
+@keyframes panel-close-open{
+  0%{transform:translate3d(-110%,0,0)}
+  43%{transform:translate3d(0,0,0)}
+  57%{transform:translate3d(0,0,0)}
+  100%{transform:translate3d(110%,0,0)}
+}
+@media(prefers-reduced-motion:reduce){
+  .site-transition{display:none!important}
+  body.transition-lock{overflow:auto}
+}
