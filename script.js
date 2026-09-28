@@ -35,12 +35,12 @@ nav?.addEventListener('click', (event) => {
   window.setTimeout(() => {
     target.scrollIntoView({ behavior: 'auto', block: 'start' });
     window.history.replaceState(null, '', link.getAttribute('href'));
-  }, 410);
+  }, 610);
 
   transitionTimer = window.setTimeout(() => {
     transitionLayer.classList.remove('is-active');
     document.body.classList.remove('transition-lock');
-  }, 980);
+  }, 1480);
 });
 
 window.requestAnimationFrame(() => document.body.classList.add('page-ready'));
