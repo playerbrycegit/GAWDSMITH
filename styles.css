@@ -463,3 +463,31 @@ body{color:#aeb6c1}
 .blueprint-pillars small{font-size:.58rem;text-align:right;color:#747e8b}
 .card-bottom{padding-top:14px;border-top:1px solid rgba(197,204,213,.16);color:#7f8995}
 @media(max-width:650px){.architecture-card{padding:18px}.blueprint{grid-template-columns:1fr;gap:16px;padding:22px 0}.blueprint-core{min-height:150px}.blueprint-pillars li,.blueprint-pillars li:nth-child(n){padding-block:13px}.blueprint-monogram{font-size:12rem;bottom:-30px}.card-bottom{gap:16px;align-items:flex-end}.card-bottom span{max-width:78%;line-height:1.5}}
+
+
+/* Cinematic navigation and section transitions */
+body{opacity:0;transition:opacity .55s cubic-bezier(.22,1,.36,1)}
+body.page-ready{opacity:1}
+body:after{content:"";position:fixed;inset:82px 0 auto;height:2px;z-index:48;pointer-events:none;opacity:0;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,transparent,#7b4c96 22%,#c5ccd5 52%,#7b4c96 78%,transparent)}
+body.is-transitioning:after{animation:section-scan .58s cubic-bezier(.22,1,.36,1)}
+@keyframes section-scan{0%{opacity:0;transform:scaleX(0);transform-origin:left}35%{opacity:.8}55%{transform:scaleX(1);transform-origin:left}56%{transform-origin:right}100%{opacity:0;transform:scaleX(0);transform-origin:right}}
+.topbar{animation:bar-enter .7s cubic-bezier(.22,1,.36,1) both}
+@keyframes bar-enter{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
+.nav a{position:relative;transition:color .28s ease,opacity .28s ease}
+.nav a:not(.nav-cta):after{content:"";position:absolute;left:0;right:.12em;bottom:-10px;height:1px;transform:scaleX(0);transform-origin:right;background:linear-gradient(90deg,#7f8995,#c5ccd5);transition:transform .38s cubic-bezier(.22,1,.36,1)}
+.nav a:not(.nav-cta):hover:after,.nav a:not(.nav-cta):focus-visible:after,.nav a.is-active:not(.nav-cta):after{transform:scaleX(1);transform-origin:left}
+.nav a.is-active:not(.nav-cta){color:#c5ccd5}
+.nav-cta{transition:background .28s ease,border-color .28s ease,color .28s ease}
+.nav-cta:hover{background:rgba(197,204,213,.07)!important;border-color:#8994a1!important}
+.js .reveal{opacity:0;filter:blur(5px);transform:translateY(28px) scale(.994);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1),filter .65s ease;transition-delay:var(--reveal-delay,0ms)}
+.js .reveal.visible{opacity:1;filter:none;transform:none}
+.hero-copy.reveal{transform:translateX(-26px)}.hero-system.reveal{transform:translateX(26px)}
+.hero-copy.reveal.visible,.hero-system.reveal.visible{transform:none}
+.hero-index.reveal.visible>div{animation:index-rise .6s cubic-bezier(.22,1,.36,1) both}
+.hero-index.reveal.visible>div:nth-child(2){animation-delay:.07s}.hero-index.reveal.visible>div:nth-child(3){animation-delay:.14s}.hero-index.reveal.visible>div:nth-child(4){animation-delay:.21s}
+@keyframes index-rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.anatomy-grid article,.forge-card,.service-list article,.offer-card,.resurrection-path article,.deliverables-grid article,.doctrine-grid article{transition:background .3s ease,border-color .3s ease,color .3s ease,transform .35s cubic-bezier(.22,1,.36,1)}
+.architecture-card{transition:transform .55s cubic-bezier(.22,1,.36,1),border-color .35s ease,box-shadow .55s ease}
+.architecture-card:hover{transform:translateY(-5px);border-color:rgba(197,204,213,.38);box-shadow:0 36px 92px rgba(0,0,0,.46)}
+@media(max-width:1050px){.nav.open a{animation:nav-item-in .45s cubic-bezier(.22,1,.36,1) both}.nav.open a:nth-child(2){animation-delay:.04s}.nav.open a:nth-child(3){animation-delay:.08s}.nav.open a:nth-child(4){animation-delay:.12s}.nav.open a:nth-child(5){animation-delay:.16s}.nav.open a:nth-child(6){animation-delay:.2s}.nav.open a:nth-child(7){animation-delay:.24s}@keyframes nav-item-in{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}}
+@media(prefers-reduced-motion:reduce){body,.topbar,.nav a,.js .reveal,.architecture-card{animation:none!important;transition:none!important}body{opacity:1}body:after{display:none}}
