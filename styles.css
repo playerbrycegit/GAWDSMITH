@@ -231,6 +231,36 @@ h2{font-family:"Libre Caslon Display",serif;font-size:clamp(3rem,5.2vw,6rem);fon
 .center-action{text-align:center;margin-top:50px}
 .about-section{background:linear-gradient(160deg,#08080b 0%,#14001e 52%,#050508 100%)}
 .about-grid{align-items:start}
+
+
+/* Institutional Blueprint — compact architectural register */
+:root{--white:#c5ccd5;--platinum:#c5ccd5;--silver2:#b8c1cc;--steel-light:#c5ccd5}
+body{color:#aeb6c1}
+.brand,.nav a:hover,.menu-toggle,.btn.ghost,.btn.dark,h1,h2,h3,.forge-card p,.card-bottom b{color:#c5ccd5}
+.brand-word,.hero-index span,.light-section .anatomy-grid h3,.light-section .service-list h3,.light-section .doctrine-grid h3,.engagement-section h3,.contact-form input,.contact-form textarea,.contact-form select,.contact-form select option{color:#c5ccd5}
+.blueprint-pillars span,.case-context blockquote,.equity-grid span,.terms-list summary{color:#bfc6cf}
+.btn.primary:hover{background:linear-gradient(135deg,#c9d0d8 0%,#8f99a6 52%,#bbc3cc 100%)}
+.architecture-card{padding:20px 22px 18px;background:linear-gradient(135deg,rgba(197,204,213,.035),transparent 42%),rgba(6,5,8,.84)}
+.architecture-card:before{opacity:.5;background-size:24px 24px}
+.card-top{padding-bottom:14px;border-bottom:1px solid rgba(197,204,213,.16)}
+.blueprint{min-height:0;display:grid;grid-template-columns:minmax(150px,.7fr) minmax(245px,1.3fr);gap:24px;align-items:stretch;justify-content:stretch;padding:30px 0 28px}
+.blueprint-monogram{inset:auto 0 -68px auto;display:block;font-size:17rem;line-height:1;opacity:.42}
+.blueprint-core{width:auto;height:auto;min-height:286px;transform:none;align-items:flex-start;justify-content:flex-end;text-align:left;padding:26px 22px;border:1px solid rgba(197,204,213,.38);border-top:3px solid #9ba5b2;background:linear-gradient(155deg,rgba(46,9,65,.68),rgba(6,6,9,.96) 70%);box-shadow:none}
+.blueprint-core:before{content:"CORE";position:absolute;top:20px;left:22px;color:#747e8b;font:700 .62rem/1 "Barlow Condensed",sans-serif;letter-spacing:.22em}
+.blueprint-core:after{inset:9px;border-color:rgba(197,204,213,.12)}
+.blueprint-core small,.blueprint-core strong{transform:none}
+.blueprint-core small{color:#7f8995}
+.blueprint-core strong{margin-top:10px;color:#c5ccd5;font-size:1.75rem;line-height:.95;letter-spacing:.01em}
+.blueprint-pillars{position:relative;inset:auto;display:grid;grid-template-rows:repeat(5,1fr);gap:0;min-width:0}
+.blueprint-pillars li,.blueprint-pillars li:nth-child(n){position:relative;inset:auto;display:grid;grid-template-columns:34px minmax(0,1fr) auto;column-gap:12px;align-items:center;padding:10px 4px 10px 14px;border-bottom:1px solid rgba(197,204,213,.14)}
+.blueprint-pillars li:first-child{border-top:1px solid rgba(197,204,213,.14)}
+.blueprint-pillars li:before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;transform:translateY(-50%);background:#858f9c}
+.blueprint-pillars li:after,.blueprint-pillars li:nth-child(n):after{display:none}
+.blueprint-pillars b{grid-row:auto;font-size:1.65rem;line-height:1;color:#aeb7c2}
+.blueprint-pillars span{font-size:.69rem;font-weight:700;letter-spacing:.16em;color:#c1c8d1}
+.blueprint-pillars small{font-size:.58rem;text-align:right;color:#747e8b}
+.card-bottom{padding-top:14px;border-top:1px solid rgba(197,204,213,.16);color:#7f8995}
+@media(max-width:650px){.architecture-card{padding:18px}.blueprint{grid-template-columns:1fr;gap:16px;padding:22px 0}.blueprint-core{min-height:150px}.blueprint-pillars li,.blueprint-pillars li:nth-child(n){padding-block:13px}.blueprint-monogram{font-size:12rem;bottom:-30px}.card-bottom{gap:16px;align-items:flex-end}.card-bottom span{max-width:78%;line-height:1.5}}
 .about-copy>p{font-size:1.2rem;color:#c0bdc6}
 .principles{display:grid;grid-template-columns:1fr 1fr;margin-top:38px;border-top:1px solid var(--line)}
 .principles div{padding:20px 5px;border-bottom:1px solid var(--line)}
@@ -258,6 +288,36 @@ footer{padding:70px 6vw;background:linear-gradient(180deg,#08070c,#020203);borde
 .footer-mark{display:flex;align-items:center;justify-content:center;gap:16px}
 .footer-brand{font-family:"Libre Caslon Display",serif;font-size:2.7rem;letter-spacing:.06em;color:var(--gold)}
 .footer-line{font-size:.9rem;margin-top:8px}
+
+
+/* Final institutional blueprint and steel type */
+:root{--white:#c5ccd5;--platinum:#c5ccd5;--silver2:#b8c1cc;--steel-light:#c5ccd5}
+body{color:#aeb6c1}
+.brand,.nav a:hover,.menu-toggle,.btn.ghost,.btn.dark,h1,h2,h3,.forge-card p,.card-bottom b{color:#c5ccd5}
+.brand-word,.hero-index span,.light-section .anatomy-grid h3,.light-section .service-list h3,.light-section .doctrine-grid h3,.engagement-section h3,.contact-form input,.contact-form textarea,.contact-form select,.contact-form select option{color:#c5ccd5}
+.blueprint-pillars span,.case-context blockquote,.equity-grid span,.terms-list summary{color:#bfc6cf}
+.btn.primary:hover{background:linear-gradient(135deg,#c9d0d8 0%,#8f99a6 52%,#bbc3cc 100%)}
+.architecture-card{padding:20px 22px 18px;background:linear-gradient(135deg,rgba(197,204,213,.035),transparent 42%),rgba(6,5,8,.84)}
+.architecture-card:before{opacity:.5;background-size:24px 24px}
+.card-top{padding-bottom:14px;border-bottom:1px solid rgba(197,204,213,.16)}
+.blueprint{min-height:0;display:grid;grid-template-columns:minmax(150px,.7fr) minmax(245px,1.3fr);gap:24px;align-items:stretch;justify-content:stretch;padding:30px 0 28px}
+.blueprint-monogram{inset:auto 0 -68px auto;display:block;font-size:17rem;line-height:1;opacity:.42}
+.blueprint-core{width:auto;height:auto;min-height:286px;transform:none;align-items:flex-start;justify-content:flex-end;text-align:left;padding:26px 22px;border:1px solid rgba(197,204,213,.38);border-top:3px solid #9ba5b2;background:linear-gradient(155deg,rgba(46,9,65,.68),rgba(6,6,9,.96) 70%);box-shadow:none}
+.blueprint-core:before{content:"CORE";position:absolute;top:20px;left:22px;color:#747e8b;font:700 .62rem/1 "Barlow Condensed",sans-serif;letter-spacing:.22em}
+.blueprint-core:after{inset:9px;border-color:rgba(197,204,213,.12)}
+.blueprint-core small,.blueprint-core strong{transform:none}
+.blueprint-core small{color:#7f8995}
+.blueprint-core strong{margin-top:10px;color:#c5ccd5;font-size:1.75rem;line-height:.95;letter-spacing:.01em}
+.blueprint-pillars{position:relative;inset:auto;display:grid;grid-template-rows:repeat(5,1fr);gap:0;min-width:0}
+.blueprint-pillars li,.blueprint-pillars li:nth-child(n){position:relative;inset:auto;display:grid;grid-template-columns:34px minmax(0,1fr) auto;column-gap:12px;align-items:center;padding:10px 4px 10px 14px;border-bottom:1px solid rgba(197,204,213,.14)}
+.blueprint-pillars li:first-child{border-top:1px solid rgba(197,204,213,.14)}
+.blueprint-pillars li:before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;transform:translateY(-50%);background:#858f9c}
+.blueprint-pillars li:after,.blueprint-pillars li:nth-child(n):after{display:none}
+.blueprint-pillars b{grid-row:auto;font-size:1.65rem;line-height:1;color:#aeb7c2}
+.blueprint-pillars span{font-size:.69rem;font-weight:700;letter-spacing:.16em;color:#c1c8d1}
+.blueprint-pillars small{font-size:.58rem;text-align:right;color:#747e8b}
+.card-bottom{padding-top:14px;border-top:1px solid rgba(197,204,213,.16);color:#7f8995}
+@media(max-width:650px){.architecture-card{padding:18px}.blueprint{grid-template-columns:1fr;gap:16px;padding:22px 0}.blueprint-core{min-height:150px}.blueprint-pillars li,.blueprint-pillars li:nth-child(n){padding-block:13px}.blueprint-monogram{font-size:12rem;bottom:-30px}.card-bottom{gap:16px;align-items:flex-end}.card-bottom span{max-width:78%;line-height:1.5}}
 .footer-meta,.footer-copy{color:#6f6c75;font-size:.7rem;margin-top:18px}
 .reveal{opacity:1;transform:none}
 .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
@@ -373,3 +433,33 @@ h1{max-width:830px;font-size:clamp(5rem,8.2vw,9rem);font-weight:600;line-height:
 .anatomy-grid article:hover,.anatomy-grid article:focus-within,.anatomy-grid article:active{background:rgba(61,10,95,.18)}
 .anatomy-grid article:hover p,.anatomy-grid article:focus-within p,.anatomy-grid article:active p{max-height:5rem;margin-top:12px;opacity:1;transform:none}
 @media(hover:none){.anatomy-grid article{cursor:pointer}}
+
+
+/* Final institutional blueprint and steel type */
+:root{--white:#c5ccd5;--platinum:#c5ccd5;--silver2:#b8c1cc;--steel-light:#c5ccd5}
+body{color:#aeb6c1}
+.brand,.nav a:hover,.menu-toggle,.btn.ghost,.btn.dark,h1,h2,h3,.forge-card p,.card-bottom b{color:#c5ccd5}
+.brand-word,.hero-index span,.light-section .anatomy-grid h3,.light-section .service-list h3,.light-section .doctrine-grid h3,.engagement-section h3,.contact-form input,.contact-form textarea,.contact-form select,.contact-form select option{color:#c5ccd5}
+.blueprint-pillars span,.case-context blockquote,.equity-grid span,.terms-list summary{color:#bfc6cf}
+.btn.primary:hover{background:linear-gradient(135deg,#c9d0d8 0%,#8f99a6 52%,#bbc3cc 100%)}
+.architecture-card{padding:20px 22px 18px;background:linear-gradient(135deg,rgba(197,204,213,.035),transparent 42%),rgba(6,5,8,.84)}
+.architecture-card:before{opacity:.5;background-size:24px 24px}
+.card-top{padding-bottom:14px;border-bottom:1px solid rgba(197,204,213,.16)}
+.blueprint{min-height:0;display:grid;grid-template-columns:minmax(150px,.7fr) minmax(245px,1.3fr);gap:24px;align-items:stretch;justify-content:stretch;padding:30px 0 28px}
+.blueprint-monogram{inset:auto 0 -68px auto;display:block;font-size:17rem;line-height:1;opacity:.42}
+.blueprint-core{width:auto;height:auto;min-height:286px;transform:none;align-items:flex-start;justify-content:flex-end;text-align:left;padding:26px 22px;border:1px solid rgba(197,204,213,.38);border-top:3px solid #9ba5b2;background:linear-gradient(155deg,rgba(46,9,65,.68),rgba(6,6,9,.96) 70%);box-shadow:none}
+.blueprint-core:before{content:"CORE";position:absolute;top:20px;left:22px;color:#747e8b;font:700 .62rem/1 "Barlow Condensed",sans-serif;letter-spacing:.22em}
+.blueprint-core:after{inset:9px;border-color:rgba(197,204,213,.12)}
+.blueprint-core small,.blueprint-core strong{transform:none}
+.blueprint-core small{color:#7f8995}
+.blueprint-core strong{margin-top:10px;color:#c5ccd5;font-size:1.75rem;line-height:.95;letter-spacing:.01em}
+.blueprint-pillars{position:relative;inset:auto;display:grid;grid-template-rows:repeat(5,1fr);gap:0;min-width:0}
+.blueprint-pillars li,.blueprint-pillars li:nth-child(n){position:relative;inset:auto;display:grid;grid-template-columns:34px minmax(0,1fr) auto;column-gap:12px;align-items:center;padding:10px 4px 10px 14px;border-bottom:1px solid rgba(197,204,213,.14)}
+.blueprint-pillars li:first-child{border-top:1px solid rgba(197,204,213,.14)}
+.blueprint-pillars li:before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;transform:translateY(-50%);background:#858f9c}
+.blueprint-pillars li:after,.blueprint-pillars li:nth-child(n):after{display:none}
+.blueprint-pillars b{grid-row:auto;font-size:1.65rem;line-height:1;color:#aeb7c2}
+.blueprint-pillars span{font-size:.69rem;font-weight:700;letter-spacing:.16em;color:#c1c8d1}
+.blueprint-pillars small{font-size:.58rem;text-align:right;color:#747e8b}
+.card-bottom{padding-top:14px;border-top:1px solid rgba(197,204,213,.16);color:#7f8995}
+@media(max-width:650px){.architecture-card{padding:18px}.blueprint{grid-template-columns:1fr;gap:16px;padding:22px 0}.blueprint-core{min-height:150px}.blueprint-pillars li,.blueprint-pillars li:nth-child(n){padding-block:13px}.blueprint-monogram{font-size:12rem;bottom:-30px}.card-bottom{gap:16px;align-items:flex-end}.card-bottom span{max-width:78%;line-height:1.5}}
