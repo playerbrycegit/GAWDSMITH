@@ -340,3 +340,36 @@ h1{max-width:830px;font-size:clamp(5rem,8.2vw,9rem);font-weight:600;line-height:
 .resurrection-section,.offers-section,.case-section,.about-section{background:linear-gradient(150deg,#040305,#0c0610 62%,#050307)}.equity-grid span{font-size:1.7rem;font-weight:600}.engagement-section{background:#dfe3e8}.engagement-map article{padding:32px 14px}.engagement-map>article>span{font-family:"Arial Narrow","Helvetica Neue",Arial,sans-serif;font-weight:700;color:#3d0a5f}.deliverables-grid span{font-size:1.45rem;font-weight:600}.offer-card{background:rgba(255,255,255,.015)}.offer-card.featured-offer{background:rgba(56,14,77,.3);box-shadow:inset 0 2px 0 #aeb6c1}.offer-card h3{font-size:2.65rem}.offer-meta strong,.specialized-price strong{font-family:"Arial Narrow","Helvetica Neue",Arial,sans-serif;font-weight:600}.specialized-offers h3{font-size:2rem}.case-context blockquote{font-size:2.3rem;font-weight:600}.case-forge b{font-weight:700}.gawdos-section{background:linear-gradient(145deg,#08040a,#17071f 60%,#08070a)}.os-shell{border-color:rgba(220,226,234,.28);background:#050507}.big-score{font-weight:700}.doctrine-grid h3{font-size:1.8rem}.contact-section{background:#e5e8ec}.contact-form input,.contact-form textarea,.contact-form select{border-radius:0;background:#f6f7f9}.qualification-list span:before{content:"▰";color:#3d0a5f}footer{border-top-color:rgba(220,226,234,.2);background:#020203}.footer-brand{font-size:3rem;font-weight:700;letter-spacing:.12em}
 @media(max-width:1050px){.nav{top:82px;background:#040406}.section-head{padding-left:22px}}
 @media(max-width:650px){.section{padding:105px 6vw}.hero{padding-top:132px}h1{font-size:clamp(4.1rem,19vw,6rem);line-height:.8}h2{font-size:clamp(3.2rem,15vw,5rem)}.hero-index div{padding-inline:8px}.hero-index span{font-size:1.35rem}}
+
+
+/* Dark institutional surface — no light section backgrounds */
+.light-section,
+.engagement-section,
+.contact-section{
+  color:#dce2ea;
+  background:radial-gradient(circle at 84% 18%,rgba(61,10,95,.22),transparent 34%),linear-gradient(150deg,#030305 0%,#0b0610 58%,#050307 100%);
+}
+.light-section .eyebrow.dark,.engagement-section .eyebrow.dark,.contact-section .eyebrow.dark{color:#aeb7c3}
+.light-section .section-head,.engagement-section .section-head,.contact-section .section-head{border-left-color:#77818e}
+.light-section .section-head p,.light-section .manifesto p,.light-section .service-list p,.light-section .doctrine-grid p,.engagement-section .section-head p,.engagement-section .engagement-map p,.engagement-section .deliverables-title p,.contact-section .contact-copy>p{color:#aeb4bf}
+.light-section .pullquote{border-top-color:#77818e;color:#dce2ea}
+.light-section .anatomy-grid,.light-section .service-list,.light-section .doctrine-grid,.engagement-section .engagement-map,.engagement-section .deliverables-grid,.contact-section .qualification-list{border-color:rgba(220,226,234,.16)}
+.light-section .anatomy-grid article,.light-section .service-list article,.light-section .doctrine-grid article,.engagement-section .engagement-map article,.engagement-section .deliverables-grid article,.contact-section .qualification-list span{border-color:rgba(220,226,234,.16)}
+.light-section .anatomy-grid h3,.light-section .service-list h3,.light-section .doctrine-grid h3,.engagement-section h3{color:#dce2ea}
+.light-section .anatomy-grid span,.light-section .service-index,.light-section .doctrine-grid span,.engagement-section .engagement-map>article>span,.engagement-section .deliverables-grid b{color:#9ba5b2}
+.contact-section .qualification-list span{color:#aeb4bf}
+.contact-section .qualification-list span:before{color:#8f99a8}
+.contact-form label{color:#aeb4bf}
+.contact-form input,.contact-form textarea,.contact-form select{color:#e2e6ec;border-color:rgba(220,226,234,.24);background:#08080b}
+.contact-form select option{color:#e2e6ec;background:#08080b}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:#9ca6b2}
+.form-note{color:#858d98!important}.form-status{color:#b8c0cb!important}
+
+/* Discipline anatomy: titles at rest, definitions on intent */
+.anatomy-grid article{min-height:132px;display:flex;flex-direction:column;justify-content:center;outline:none;cursor:default;overflow:hidden}
+.anatomy-grid article>span{display:none}
+.anatomy-grid h3{margin:0}
+.anatomy-grid p{max-height:0;margin:0;opacity:0;overflow:hidden;transform:translateY(8px);color:#aeb4bf;transition:max-height .24s ease,margin .24s ease,opacity .2s ease,transform .24s ease}
+.anatomy-grid article:hover,.anatomy-grid article:focus-within,.anatomy-grid article:active{background:rgba(61,10,95,.18)}
+.anatomy-grid article:hover p,.anatomy-grid article:focus-within p,.anatomy-grid article:active p{max-height:5rem;margin-top:12px;opacity:1;transform:none}
+@media(hover:none){.anatomy-grid article{cursor:pointer}}
