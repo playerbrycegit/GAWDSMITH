@@ -52,3 +52,36 @@ ${data.challenge}`;
   status.textContent = 'Your inquiry is ready. Opening your email client.';
   window.location.href = `mailto:${encodeURIComponent(recipient)}?subject=${subject}&body=${encodeURIComponent(inquiry)}`;
 });
+
+
+window.requestAnimationFrame(() => document.body.classList.add('page-ready'));
+
+document.querySelectorAll('.nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.body.classList.remove('is-transitioning');
+    void document.body.offsetWidth;
+    document.body.classList.add('is-transitioning');
+    window.setTimeout(() => document.body.classList.remove('is-transitioning'), 620);
+  });
+});
+
+const sectionLinks = [...document.querySelectorAll('.nav a[href^="#"]')];
+const trackedSections = sectionLinks
+  .map(link => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    sectionLinks.forEach(link => {
+      const active = link.getAttribute('href') === `#${entry.target.id}`;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+  });
+}, { rootMargin: '-38% 0px -52%', threshold: 0 });
+trackedSections.forEach(section => sectionObserver.observe(section));
+
+document.querySelectorAll('.reveal').forEach((el, index) => {
+  el.style.setProperty('--reveal-delay', `${Math.min(index % 3, 2) * 45}ms`);
+});
