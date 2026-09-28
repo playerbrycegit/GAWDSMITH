@@ -35,6 +35,9 @@ nav?.addEventListener('click', (event) => {
   window.setTimeout(() => {
     target.scrollIntoView({ behavior: 'auto', block: 'start' });
     window.history.replaceState(null, '', link.getAttribute('href'));
+        target.classList.remove('section-arrival');
+    void target.offsetWidth;
+    target.classList.add('section-arrival');
   }, 610);
 
   transitionTimer = window.setTimeout(() => {
