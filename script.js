@@ -5,11 +5,66 @@ menuToggle?.addEventListener('click', () => {
   document.body.classList.toggle('menu-open', isOpen);
   menuToggle.setAttribute('aria-expanded', String(isOpen));
 });
-document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
+const transitionLayer = document.createElement('div');
+transitionLayer.className = 'site-transition';
+transitionLayer.setAttribute('aria-hidden', 'true');
+transitionLayer.innerHTML = '<i class="transition-panel transition-panel-dark"></i><i class="transition-panel transition-panel-purple"></i><i class="transition-panel transition-panel-steel"></i>';
+document.body.appendChild(transitionLayer);
+
+let transitionTimer;
+nav?.addEventListener('click', (event) => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link) return;
+
+  const target = document.querySelector(link.getAttribute('href'));
+  if (!target) return;
+
   nav.classList.remove('open');
   document.body.classList.remove('menu-open');
   menuToggle?.setAttribute('aria-expanded', 'false');
-}));
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  event.preventDefault();
+  window.clearTimeout(transitionTimer);
+  transitionLayer.classList.remove('is-active');
+  void transitionLayer.offsetWidth;
+  document.body.classList.add('transition-lock');
+  transitionLayer.classList.add('is-active');
+
+  window.setTimeout(() => {
+    target.scrollIntoView({ behavior: 'auto', block: 'start' });
+    window.history.replaceState(null, '', link.getAttribute('href'));
+  }, 410);
+
+  transitionTimer = window.setTimeout(() => {
+    transitionLayer.classList.remove('is-active');
+    document.body.classList.remove('transition-lock');
+  }, 980);
+});
+
+window.requestAnimationFrame(() => document.body.classList.add('page-ready'));
+
+const sectionLinks = [...document.querySelectorAll('.nav a[href^="#"]')];
+const sections = sectionLinks
+  .map(link => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    sectionLinks.forEach(link => {
+      const active = link.getAttribute('href') === `#${entry.target.id}`;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+  });
+},{rootMargin:'-38% 0px -52%',threshold:0});
+sections.forEach(section => sectionObserver.observe(section));
+
+document.querySelectorAll('.reveal').forEach((el,index) => {
+  el.style.setProperty('--reveal-delay', `${Math.min(index % 3,2) * 45}ms`);
+});
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -51,37 +106,4 @@ ${data.challenge}`;
 
   status.textContent = 'Your inquiry is ready. Opening your email client.';
   window.location.href = `mailto:${encodeURIComponent(recipient)}?subject=${subject}&body=${encodeURIComponent(inquiry)}`;
-});
-
-
-window.requestAnimationFrame(() => document.body.classList.add('page-ready'));
-
-document.querySelectorAll('.nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.body.classList.remove('is-transitioning');
-    void document.body.offsetWidth;
-    document.body.classList.add('is-transitioning');
-    window.setTimeout(() => document.body.classList.remove('is-transitioning'), 620);
-  });
-});
-
-const sectionLinks = [...document.querySelectorAll('.nav a[href^="#"]')];
-const trackedSections = sectionLinks
-  .map(link => document.querySelector(link.getAttribute('href')))
-  .filter(Boolean);
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    sectionLinks.forEach(link => {
-      const active = link.getAttribute('href') === `#${entry.target.id}`;
-      link.classList.toggle('is-active', active);
-      if (active) link.setAttribute('aria-current', 'page');
-      else link.removeAttribute('aria-current');
-    });
-  });
-}, { rootMargin: '-38% 0px -52%', threshold: 0 });
-trackedSections.forEach(section => sectionObserver.observe(section));
-
-document.querySelectorAll('.reveal').forEach((el, index) => {
-  el.style.setProperty('--reveal-delay', `${Math.min(index % 3, 2) * 45}ms`);
 });
